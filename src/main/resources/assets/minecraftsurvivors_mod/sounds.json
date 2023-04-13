@@ -1,0 +1,35 @@
+{
+  "battle_bgm": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "minecraftsurvivors_mod:battle_bgm",
+        "stream": true
+      }
+    ]
+  },
+  "point": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "minecraftsurvivors_mod:point"
+      }
+    ]
+  },
+  "bigpoint": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "minecraftsurvivors_mod:bigpoint"
+      }
+    ]
+  },
+  "recovery": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "minecraftsurvivors_mod:recovery"
+      }
+    ]
+  }
+}

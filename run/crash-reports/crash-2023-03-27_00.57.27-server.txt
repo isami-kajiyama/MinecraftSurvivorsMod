@@ -1,0 +1,173 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 23/03/27 0:57
+Description: Ticking entity
+
+java.lang.NullPointerException: Ticking entity
+	at net.minecraft.scoreboard.Scoreboard.removeObjective(Scoreboard.java:167) ~[forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16.5-recomp.jar:?] {re:classloading}
+	at jp.nora.minecraftsurvivors_mod.MinecraftSurvivors_mod.endGame(MinecraftSurvivors_mod.java:224) ~[main/:?] {re:classloading}
+	at jp.nora.minecraftsurvivors_mod.MinecraftSurvivors_mod.onEntityDeath(MinecraftSurvivors_mod.java:150) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_0_MinecraftSurvivors_mod_onEntityDeath_LivingDeathEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingDeath(ForgeHooks.java:374) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.onDeath(ServerPlayerEntity.java:499) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.attackEntityFrom(LivingEntity.java:1118) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.attackEntityFrom(PlayerEntity.java:867) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.player.ServerPlayerEntity.attackEntityFrom(ServerPlayerEntity.java:621) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.MobEntity.attackEntityAsMob(MobEntity.java:1477) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.monster.ZombieEntity.attackEntityAsMob(ZombieEntity.java:332) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:154) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:146) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.ZombieAttackGoal.tick(ZombieAttackGoal.java:34) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.PrioritizedGoal.tick(PrioritizedGoal.java:63) ~[forge:?] {re:classloading}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:1.8.0_211] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[?:1.8.0_211] {}
+	at java.util.Iterator.forEachRemaining(Iterator.java:116) ~[?:1.8.0_211] {}
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[?:1.8.0_211] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_211] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_211] {}
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:1.8.0_211] {}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:1.8.0_211] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_211] {}
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418) ~[?:1.8.0_211] {}
+	at net.minecraft.entity.ai.goal.GoalSelector.tick(GoalSelector.java:91) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.updateEntityActionState(MobEntity.java:739) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.livingTick(LivingEntity.java:2564) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.livingTick(MobEntity.java:538) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.monster.MonsterEntity.livingTick(MonsterEntity.java:44) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.monster.ZombieEntity.livingTick(ZombieEntity.java:250) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2307) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:337) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.monster.ZombieEntity.tick(ZombieEntity.java:220) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:623) ~[forge:?] {re:classloading}
+	at net.minecraft.world.World.guardEntityTick(World.java:601) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:407) ~[forge:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:885) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_211] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.scoreboard.Scoreboard.removeObjective(Scoreboard.java:167) ~[forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16.5-recomp.jar:?] {re:classloading}
+	at jp.nora.minecraftsurvivors_mod.MinecraftSurvivors_mod.endGame(MinecraftSurvivors_mod.java:224) ~[main/:?] {re:classloading}
+	at jp.nora.minecraftsurvivors_mod.MinecraftSurvivors_mod.onEntityDeath(MinecraftSurvivors_mod.java:150) ~[main/:?] {re:classloading}
+	at net.minecraftforge.eventbus.ASMEventHandler_0_MinecraftSurvivors_mod_onEntityDeath_LivingDeathEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.common.ForgeHooks.onLivingDeath(ForgeHooks.java:374) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.onDeath(ServerPlayerEntity.java:499) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.attackEntityFrom(LivingEntity.java:1118) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.player.PlayerEntity.attackEntityFrom(PlayerEntity.java:867) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.player.ServerPlayerEntity.attackEntityFrom(ServerPlayerEntity.java:621) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.MobEntity.attackEntityAsMob(MobEntity.java:1477) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.monster.ZombieEntity.attackEntityAsMob(ZombieEntity.java:332) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.MeleeAttackGoal.checkAndPerformAttack(MeleeAttackGoal.java:154) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.MeleeAttackGoal.tick(MeleeAttackGoal.java:146) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.ZombieAttackGoal.tick(ZombieAttackGoal.java:34) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.ai.goal.PrioritizedGoal.tick(PrioritizedGoal.java:63) ~[forge:?] {re:classloading}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:1.8.0_211] {}
+	at java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:175) ~[?:1.8.0_211] {}
+	at java.util.Iterator.forEachRemaining(Iterator.java:116) ~[?:1.8.0_211] {}
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801) ~[?:1.8.0_211] {}
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:481) ~[?:1.8.0_211] {}
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471) ~[?:1.8.0_211] {}
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:1.8.0_211] {}
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:1.8.0_211] {}
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:1.8.0_211] {}
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418) ~[?:1.8.0_211] {}
+	at net.minecraft.entity.ai.goal.GoalSelector.tick(GoalSelector.java:91) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.updateEntityActionState(MobEntity.java:739) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.LivingEntity.livingTick(LivingEntity.java:2564) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.livingTick(MobEntity.java:538) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.monster.MonsterEntity.livingTick(MonsterEntity.java:44) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.monster.ZombieEntity.livingTick(ZombieEntity.java:250) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.LivingEntity.tick(LivingEntity.java:2307) ~[forge:?] {re:classloading}
+	at net.minecraft.entity.MobEntity.tick(MobEntity.java:337) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.entity.monster.ZombieEntity.tick(ZombieEntity.java:220) ~[forge:?] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:623) ~[forge:?] {re:classloading}
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:zombie (net.minecraft.entity.monster.ZombieEntity)
+	Entity ID: 1226
+	Entity Name: ゾンビ
+	Entity's Exact location: -16.63, 100.00, -2.57
+	Entity's Block location: World: (-17,100,-3), Chunk: (at 15,6,13 in -2,-1; contains blocks -32,0,-16 to -17,255,-1), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Entity's Momentum: -0.03, -0.08, -0.05
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:601) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:407) ~[forge:?] {re:classloading}
+
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/105, l='ServerLevel[Test]', x=-17.39, y=100.00, z=-3.70]]
+	Chunk stats: ServerChunkCache: 2901
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (208,4,32), Chunk: (at 0,0,0 in 13,2; contains blocks 208,0,32 to 223,255,47), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 302649 game time, 13421 day time
+	Level name: Test
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 81205 (now: false), thunder time: 103534 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:885) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:84) ~[forge:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:664) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.lambda$startServer$0(MinecraftServer.java:233) ~[forge:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_211] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_211, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 895546872 bytes (854 MB) / 1857028096 bytes (1771 MB) up to 3722969088 bytes (3550 MB)
+	CPUs: 8
+	JVM Flags: 2 total; -XX:+IgnoreUnrecognizedVMOptions -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16.5-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16.5-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16.5-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16.5-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16.5-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.34
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar                                  |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: a1:d4:5e:04:4f:d3:d6:e0:7b:37:97:cf:77:b0:de:ad:4a:47:ce:8c:96:49:5f:0a:cf:8c:ae:b2:6d:4b:8a:3f
+		main                                              |MinecraftSurvivors_mod        |minecraftsurvivors_mod        |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.34_mapped_snapshot_20210309-1.16|Forge                         |forge                         |36.2.34             |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 5c096c6a-dcc4-4fdf-a54f-b273c27f983b
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/105, l='ServerLevel[Test]', x=-17.39, y=100.00, z=-3.70]]
+	Data Packs: vanilla, mod:minecraftsurvivors_mod, mod:forge
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

@@ -1,0 +1,6 @@
+isikawa,9800
+isshiki,8500
+ao,2600
+mm,2100
+yukiti,1700
+babakoji,1300
